@@ -1,0 +1,5 @@
+{
+  "curl": "curl -X POST \\\n  https://api.pdfapi.dev/v1/convert \\\n  -H 'Authorization: Bearer YOUR_API_KEY' \\\n  -F 'file=document.pdf'",
+  "python": "import requests\n\nresponse = requests.post(\n    'https://api.pdfapi.dev/v1/convert',\n    headers={'Authorization': 'Bearer YOUR_API_KEY'},\n    files={'file': open('document.pdf', 'rb')}\n)",
+  "node": "const axios = require('axios');\nconst FormData = require('form-data');\nconst fs = require('fs');\n\nconst form = new FormData();\nform.append('file', fs.createReadStream('document.pdf'));\n\nconst response = await axios.post(\n  'https://api.pdfapi.dev/v1/convert',\n  form,\n  {\n    headers: {\n      'Authorization': 'Bearer YOUR_API_KEY',\n      ...form.getHeaders()\n    }\n  }\n);"
+} 

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This robots.txt is temporary and should be removed when the site is ready
+# It blocks all search engines from crawling any part of the site 
